@@ -1,3 +1,3 @@
-module github.com/Abadbeginning/gobaselearn
+module main
 
 go 1.19

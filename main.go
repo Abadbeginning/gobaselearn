@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-  "github.com/Abadbeginning/gobaselearn/String-of-characters/test"
+  "String-of-characters/test"
 
 )
 
