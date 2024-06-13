@@ -21,11 +21,18 @@ func GetFileAndMethod(input interface{}) {
   fmt.Println("所有文件 --> ", getValue)
 
   for i:=0;i<getType.NumField();i++ {
-    fmt.Println("字段 --> ", getType.Field(i).Name)
+    field := getType.Field(i)
+    fmt.Println("字段 --> ", field.Name, getValue.Field(i).Interface())
+  }
+
+  for i:=0;i<getType.NumMethod();i++{
+    method := getType.Method(i)
+    fmt.Println("方法 --> ", method.Name, method.Type, method.Type.NumIn(), method.Type.NumOut())
   }
 }
 
 func main() {
+  pro := Programmer5{"刷到过", 12}
   
-  fmt.Println("Hello World")
+  GetFileAndMethod(pro)
 }
