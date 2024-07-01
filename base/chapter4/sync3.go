@@ -8,6 +8,7 @@ func loop() {
   }
 }
 
+// Bug 修复：删除重复的 main 函数定义
 func main() {
   go loop()
   fmt.Println("最后 ---- ")
