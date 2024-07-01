@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-func buy(n int) <-chan string {·
+func buy(n int) <-chan string {
 	ch := make(chan string)
 	go func() {
 		defer close(ch)
